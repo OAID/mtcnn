@@ -43,7 +43,7 @@ endif
 #  tensorflow settings
 ifeq ($(TF_ON), 1)
    TENSORFLOW_INCS += -I$(TENSORFLOW_ROOT)/include
-   LIBS+=-Wl,-rpath,$(TENSORFLOW_ROOT)/lib -L$(TENSORFLOW_ROOT)/lib -ltensorflow
+   LDFLAGS+=-Wl,-rpath,$(TENSORFLOW_ROOT)/lib -L$(TENSORFLOW_ROOT)/lib -ltensorflow
 
    CXXFLAGS +=$(TENSORFLOW_INCS)
 endif
